@@ -126,21 +126,22 @@
         }
     </style>
     <script>
-        chartPlugin.url = "https://links.hispindia.org/covid";
+        var baseurl = "https://links.hispindia.org/covid";
+
+        chartPlugin.url = baseurl;
         chartPlugin.username = "";
         chartPlugin.password = "";
         chartPlugin.loadingIndicator = true;
 
-        reportTablePlugin.url = "https://links.hispindia.org/covid";
+        reportTablePlugin.url = baseurl;
         reportTablePlugin.username = "";
         reportTablePlugin.password = "";
         reportTablePlugin.loadingIndicator = true;
 
-        mapPlugin.url = 'https://links.hispindia.org/covid';
+        mapPlugin.url = baseurl;
         mapPlugin.username = "";
         mapPlugin.password = "";
         mapPlugin.loadingIndicator = true;
-
 
 
         var gauge1 = {
