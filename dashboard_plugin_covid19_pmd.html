@@ -1,0 +1,569 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="https://links.hispindia.org/covid/api/documents/zKzk3biSeyk/data"/>
+    <script src="https://links.hispindia.org/covid/api/documents/VBbv1dXDDlV/data">
+    </script>
+    <script src="https://links.hispindia.org/covid/api/documents/jue7BZt3qWr/data">
+    </script>
+    <script src="https://links.hispindia.org/covid/api/documents/KiX3UEUYwi8/data">
+    </script>
+    <script src="https://links.hispindia.org/covid/api/documents/bgzFxO2Yida/data">
+    </script>
+    <script src="https://links.hispindia.org/covid/api/documents/ABe9q0n44wa/data">
+    </script>
+    <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous">
+    </script>
+
+    <script src="https://links.hispindia.org/covid/api/documents/Ck3xWnWK4LB/data">
+    </script>
+    <script src="https://links.hispindia.org/covid/api/documents/Ra0hSgx7ao1/data">
+    </script>
+    <script src="https://links.hispindia.org/covid/api/documents/FPRncRu2Q8G/data">
+    </script>
+    <script src="https://links.hispindia.org/covid/api/documents/abVyOpyJZgr/data">
+    </script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Create four equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 25%;
+            padding: 10px;
+            height: 80%;; /* Should be removed. Only for demonstration */
+        }
+
+        .column1 {
+            float: left;
+            width: 100%;
+            padding: 10px;
+            height: 100%;; /* Should be removed. Only for demonstration */
+        }
+
+        .column2 {
+            float: left;
+            width: 40%;
+            padding: 15px;
+            height: 100%;; /* Should be removed. Only for demonstration */
+        }
+
+        .column3 {
+            float: right;
+            width: 60%;
+            padding: 15px;
+            height: 100%;; /* Should be removed. Only for demonstration */
+        }
+
+        .column4 {
+            float: left;
+            width: 50%;
+            padding: 15px;
+            height: 100%;; /* Should be removed. Only for demonstration */
+        }
+
+        .column5 {
+            float: right;
+            width: 50%;
+            padding: 15px;
+            height: 100%;; /* Should be removed. Only for demonstration */
+        }
+
+        .column6 {
+            float: left;
+            width: 50%;
+            padding: 5px;
+            height: 100%;; /* Should be removed. Only for demonstration */
+        }
+
+        .column7 {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            height: 100%;; /* Should be removed. Only for demonstration */
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .inline {
+            display: inline-block;
+            border: 10px solid red;
+            margin: 10px;
+        }
+
+        #container {
+            text-align: justify;
+            -ms-text-justify: distribute-all-lines;
+            text-justify: distribute-all-lines;
+            width: 100%;
+        }
+
+        #container > div {
+            width: 100px;
+            height: 100px;
+            vertical-align: center;
+            display: inline-block;
+            *display: inline;
+            zoom: 0;
+            background: red;
+        }
+
+        span {
+            width: 100%;
+            display: inline-block;
+            font-size: 0;
+            line-height: 0
+        }
+    </style>
+    <script>
+        var baseurl = "https://links.hispindia.org/covid";
+
+        chartPlugin.url = baseurl;
+        chartPlugin.username = "";
+        chartPlugin.password = "";
+        chartPlugin.loadingIndicator = true;
+
+        reportTablePlugin.url = baseurl;
+        reportTablePlugin.username = "";
+        reportTablePlugin.password = "";
+        reportTablePlugin.loadingIndicator = true;
+
+
+        var gauge1 = {
+            "columns": [
+                {
+                    "dimension": "dx",
+                    "items": [
+                        {
+                            "id": "PsgcnyV7bfg",
+                        }
+                    ]
+                }
+            ],
+
+            "filters": [
+                {
+                    "dimension": "ou",
+                    "items": [
+                        {
+                            "id": "RZGNtaIOXaH"
+                        }
+                    ]
+                },
+                {
+                    "dimension": "pe",
+                    "items": [
+                        {
+                            "id": "LAST_5_YEARS"
+
+                        },
+                        {
+                            "id": "THIS_YEAR"
+
+                        }
+                    ]
+                }
+            ],
+            "type": "gauge",
+            "el": "gauge1"
+        };
+        var gauge2 = {
+            "columns": [
+                {
+                    "dimension": "dx",
+                    "items": [
+                        {
+                            "id": "QSyycVVqayo",
+                        }
+                    ]
+                }
+            ],
+
+            "filters": [
+                {
+                    "dimension": "ou",
+                    "items": [
+                        {
+                            "id": "RZGNtaIOXaH"
+                        }
+                    ]
+                },
+                {
+                    "dimension": "pe",
+                    "items": [
+                        {
+                            "id": "LAST_5_YEARS"
+
+                        },
+                        {
+                            "id": "THIS_YEAR"
+
+                        }
+                    ]
+                }
+            ],
+            "type": "gauge",
+            "el": "gauge2"
+        };
+
+        var gauge3 = {
+            "columns": [
+                {
+                    "dimension": "dx",
+                    "items": [
+                        {
+                            "id": "g8ar5u8ghgC",
+                        }
+                    ]
+                }
+            ],
+
+            "filters": [
+                {
+                    "dimension": "ou",
+                    "items": [
+                        {
+                            "id": "RZGNtaIOXaH"
+                        }
+                    ]
+                },
+                {
+                    "dimension": "pe",
+                    "items": [
+                        {
+                            "id": "LAST_5_YEARS"
+
+                        },
+                        {
+                            "id": "THIS_YEAR"
+
+                        }
+                    ]
+                }
+            ],
+            "type": "gauge",
+            "el": "gauge3"
+        };
+        var gauge4 = {
+            "columns": [
+                {
+                    "dimension": "dx",
+                    "items": [
+                        {
+                            "id": "CLXmcvKIwBf",
+                        }
+                    ]
+                }
+            ],
+
+            "filters": [
+                {
+                    "dimension": "ou",
+                    "items": [
+                        {
+                            "id": "RZGNtaIOXaH"
+                        }
+                    ]
+                },
+                {
+                    "dimension": "pe",
+                    "items": [
+                        {
+                            "id": "LAST_5_YEARS"
+
+                        },
+                        {
+                            "id": "THIS_YEAR"
+
+                        }
+                    ]
+                }
+            ],
+            "type": "gauge",
+            "el": "gauge4"
+        };
+
+
+        var chart1 = {
+            el: "chart1",
+            id: "omHQm45n4gD"
+        };
+        var chart2 = {
+            el: "chart2",
+            id: "AZtREuGpNYn"
+        };
+        var chart3 = {
+            el: "chart3",
+            id: "K1mYgZCO0tI"
+        };
+        var chart4 = {
+            el: "chart4",
+            id: "mqKegQ1JsEE"
+        };
+        var chart5 = {
+            el: "chart5",
+            id: "V2MVSagLKzh"
+        };
+
+        var pie1 = {
+            "columns": [
+                {dimension: "pe", items: [{id: "LAST_SIX_MONTH"}]}
+            ],
+
+            "rows": [
+                {
+                    "dimension": "dx",
+                    "items": [
+                        {
+                            "id": "wAOUWkaqfQb"
+                        },
+                        {
+                            "id": "Tmb5byvY23Y"
+                        }
+                    ]
+                }
+
+
+            ],
+            "filters": [
+                {
+                    "dimension": "ou",
+                    "items": [
+                        {
+                            "id": "RZGNtaIOXaH"
+                        }
+                    ]
+                }
+
+            ],
+            type: "pie",
+            el: "pie1",
+            title: "Positive Cases",
+            subtitle: "(by gender)"
+        };
+
+        var pie2 = {
+            "columns": [
+                {dimension: "pe", items: [{id: "LAST_SIX_MONTH"}]}
+            ],
+
+            "rows": [
+                {
+                    "dimension": "dx",
+                    "items": [
+                        {
+                            "id": "MH0mAfLlaeK"
+                        },
+                        {
+                            "id": "U0VD2ccUPyV"
+                        },
+                        {
+                            "id": "cOjfGTfwaju"
+                        },
+                        {
+                            "id": "CcPy6Md8Nn0"
+                        },
+                        {
+                            "id": "YdgMmmh0mul"
+                        },
+                        {
+                            "id": "fruYnSjbEYK"
+                        },
+                        {
+                            "id": "bgQz1PRdWNP"
+                        },
+                        {
+                            "id": "IURbvyFIyDO"
+                        },
+                        {
+                            "id": "NeUDXzokpu9"
+                        },
+                        {
+                            "id": "K7QpfZsCy51"
+                        }
+
+                    ]
+                }
+
+
+            ],
+            "filters": [
+                {
+                    "dimension": "ou",
+                    "items": [
+                        {
+                            "id": "RZGNtaIOXaH"
+                        }
+                    ]
+                }
+
+            ],
+            type: "pie",
+            el: "pie2",
+            title: "Positive cases by Age",
+            subtitle: "(Male)"
+        };
+
+        var pie3 = {
+            "columns": [
+                {dimension: "pe", items: [{id: "LAST_SIX_MONTH"}]}
+            ],
+
+            "rows": [
+                {
+                    "dimension": "dx",
+                    "items": [
+                        {
+                            "id": "tqN7H6cY461"
+                        },
+                        {
+                            "id": "ggDDuFFuxib"
+                        },
+                        {
+                            "id": "AaKNT1ZHdPJ"
+                        },
+                        {
+                            "id": "TZp10xAB2nU"
+                        },
+                        {
+                            "id": "PaiUkkgNFQm"
+                        },
+                        {
+                            "id": "IFXjIIg8ZCr"
+                        },
+                        {
+                            "id": "yqTgWXkrkhR"
+                        },
+                        {
+                            "id": "w58Z4pA0apN"
+                        },
+                        {
+                            "id": "wcjZk0NT0gh"
+                        },
+                        {
+                            "id": "Dzi842Xqqsn"
+                        }
+
+                    ]
+                }
+
+
+            ],
+            "filters": [
+                {
+                    "dimension": "ou",
+                    "items": [
+                        {
+                            "id": "RZGNtaIOXaH"
+                        }
+                    ]
+                }
+
+            ],
+            type: "pie",
+            el: "pie3",
+            title: "Positive cases by Age",
+            subtitle: "(Female)"
+        };
+
+        var pie4 = {
+            "columns": [
+                {dimension: "pe", items: [{id: "LAST_SIX_MONTH"}]}
+            ],
+
+            "rows": [
+                {
+                    "dimension": "dx",
+                    "items": [
+                        {
+                            "id": "aA07bYzEdiu"
+                        },
+                        {
+                            "id": "IyeLn2Os70V"
+                        },
+                        {
+                            "id": "K4IuabPY3c7"
+                        },
+                        {
+                            "id": "H9bguh9wy6E"
+                        },
+                        {
+                            "id": "VaTJeGJ2ADV"
+                        }
+
+                    ]
+                }
+
+
+            ],
+            "filters": [
+                {
+                    "dimension": "ou",
+                    "items": [
+                        {
+                            "id": "RZGNtaIOXaH"
+                        }
+                    ]
+                }
+
+            ],
+            type: "pie",
+            el: "pie4"
+        };
+
+
+        chartPlugin.load(gauge1, gauge2, gauge3, gauge4, chart1, pie1, chart2, pie2, pie3, chart3, pie4, chart4, chart5);
+    </script>
+</head>
+
+<body>
+<h1 style="text-align: center">COVID Patient Management Dashboard</h1>
+<div class="row">
+
+    <div class="column" style="background-color:#aaa" ; id="gauge1"></div>
+    <div class="column" style="background-color:#bbb;" id="gauge2"></div>
+
+    <!--    </div>-->
+    <div class="column" style="background-color:#ccc;" id="gauge3">
+
+    </div>
+    <div class="column" style="background-color:#ddd;" id="gauge4">
+
+    </div>
+</div>
+<div class="row" style="border-width: thin;border-style: solid">
+    <div class="column1" id="chart1"></div>
+</div>
+
+<div class="row" style="border-width: thin;border-style: solid">
+    <div class="column2" id="pie1"></div>
+    <div class="column3" id="chart2"></div>
+</div>
+<div class="row" style="border-width: thin;border-style: solid">
+    <div class="column4" id="pie2"></div>
+    <div class="column5" id="pie3"></div>
+</div>
+<div class="row" style="border-width: thin;border-style: solid">
+    <div class="column1" id="chart3"></div>
+</div>
+<div class="row" style="border-width: thin;border-style: solid">
+    <div class="column2" id="pie4"></div>
+    <div class="column3" id="chart4"></div>
+</div>
+<div class="row" style="border-width: thin;border-style: solid">
+    <div class="column1" id="chart5"></div>
+</div>
+
+</body>
+
+</html>
